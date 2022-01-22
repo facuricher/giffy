@@ -1,7 +1,7 @@
 import './App.css';
-import ListOfGifs from './components/ListOfGifs/ListOfGifs';
 import { Route } from "wouter"
 import Home from './components/pages/Home';
+import SearchResult from './components/pages/SearchResult'
 
 function App() {
 
@@ -12,7 +12,8 @@ function App() {
         component={Home}
         path='/'
         />
-        <Route component={ListOfGifs}
+        <Route 
+        component={SearchResult}
         path="/search/:keyword"/>
       </section>
     </div>
