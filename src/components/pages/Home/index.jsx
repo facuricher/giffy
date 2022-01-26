@@ -1,13 +1,19 @@
-import { useState} from "react"
+import { useState } from "react"
 import {Link, useLocation} from "wouter"
+import ListOfGifs from "../../ListOfGifs/ListOfGifs"
+import UseGifs from "../../../Hooks/useGifs"
+
 
 const POPULAR_GIFS = ['Matrix', 'Germany', 'España', 'Noruega', 'programing']
 
 export default function Home () {
  const [keyword, setKeyword] =  useState('')
  const [path, pushLocation] = useLocation()
- 
-console.log(path)
+ const {loading, gifs } = UseGifs()
+
+ // <---------------------------
+ console.log(path,loading)
+// <-----------------------------
  const handleSubmit = evt =>{
     evt.preventDefault()
     pushLocation(`/search/${keyword}`)
@@ -20,8 +26,10 @@ console.log(path)
     return(
         <>
         <form onSubmit={handleSubmit}>
-            <input placeholder="Search a gis here..." onChange={handleChange} type="text" value={keyword} />
+            <input placeholder="Search a Gif here..." onChange={handleChange} type="text" value={keyword} />
         </form>
+        <h3>ultima busqueda</h3>
+        <ListOfGifs gifs={gifs}/>
         <h3>los gifs mas populares</h3>
         <ul>
             {
