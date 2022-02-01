@@ -1,7 +1,7 @@
 import { useState } from "react"
 import {Link, useLocation} from "wouter"
-import ListOfGifs from "../../ListOfGifs/ListOfGifs"
-import UseGifs from "../../../Hooks/useGifs"
+import ListOfGifs from "../../components/ListOfGifs/ListOfGifs"
+import UseGifs from "../../Hooks/useGifs"
 
 
 const POPULAR_GIFS = ['Matrix', 'Germany', 'España', 'Noruega', 'programing']
@@ -12,10 +12,11 @@ export default function Home () {
  const {loading, gifs } = UseGifs()
 
  // <---------------------------
- console.log(path,loading)
+ //console.log(path,loading)
 // <-----------------------------
  const handleSubmit = evt =>{
     evt.preventDefault()
+    //navegar a otra ruta
     pushLocation(`/search/${keyword}`)
  }
 

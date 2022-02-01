@@ -1,5 +1,5 @@
-import ListOfGifs from "../../ListOfGifs/ListOfGifs";
-import UseGifs from "../../../Hooks/useGifs";
+import ListOfGifs from "../../components/ListOfGifs/ListOfGifs";
+import UseGifs from "../../Hooks/useGifs"
 
 export default function SearchResult ({params}) {
     const {keyword} = params
