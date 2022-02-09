@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.App-logo{
+  margin: 10px auto;
+  padding: 20px 0;
+  width: 144px;
+}
+
+.App-logo img{
+  object-fit: cover;
+  width: 100%;
+}
+
 .App-content {
   background-color: #282c34;
   min-height: 100vh;

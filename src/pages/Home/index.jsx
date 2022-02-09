@@ -29,7 +29,7 @@ export default function Home () {
         <form onSubmit={handleSubmit}>
             <input placeholder="Search a Gif here..." onChange={handleChange} type="text" value={keyword} />
         </form>
-        <h3>ultima busqueda</h3>
+        <h3>ultima busqueda...</h3>
         <ListOfGifs gifs={gifs}/>
         <h3>los gifs mas populares</h3>
         <ul>
