@@ -9,7 +9,7 @@ const POPULAR_GIFS = ['Matrix', 'Germany', 'España', 'Noruega', 'programing']
 export default function Home () {
  const [keyword, setKeyword] =  useState('')
  const [path, pushLocation] = useLocation()
- const {loading, gifs } = UseGifs()
+ const { gifs } = UseGifs()
 
  // <---------------------------
  //console.log(path,loading)

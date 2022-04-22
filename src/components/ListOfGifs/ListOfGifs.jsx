@@ -1,7 +1,9 @@
 import Gif from '../Gif/Gif'
+import { GifsDiv } from './styled'
+
 
 export default function ListOfGifs ({gifs}) {
-    return <div>
+    return <GifsDiv>
         {
             gifs.map(({id, title, url})=>
                 <Gif
@@ -12,5 +14,5 @@ export default function ListOfGifs ({gifs}) {
                 />
             )
         }
-    </div>
+    </GifsDiv>
 }
